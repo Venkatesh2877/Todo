@@ -1,0 +1,173 @@
+
+
+body{
+    text-align: center;
+    font: italic 1.2em "Fira Sans", serif;
+    text-shadow: 1px 0px grey;
+}
+
+#todo-container{
+    background-color: rgb(229, 230, 230);
+    width: 80%;
+    height: auto;
+    margin:auto;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+#input-container{
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 80%;
+    height: 30px;
+}
+
+#input-container:hover{
+    cursor: pointer;
+    background-color: rgb(231, 228, 228);
+    box-shadow: 2px 2px 5px 2px grey;
+}
+
+
+input{
+    border: none;
+    outline: none;
+    margin: 5px;
+    background-color: transparent
+    
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+input[type="checkbox"]:after{
+    content: "X";
+    position: relative;
+    left: 6px;
+    top: 3px;
+    font-weight: 900;
+    font-size: 12px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover{
+    background-color: rgb(40, 37, 37);
+}
+
+input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+} 
+
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+#input-container i{
+    display: none;
+}
+
+#input-container:hover i{
+    display: inline;
+}
+
+#add{
+ width: 93%;
+}
+
+i{
+ cursor: pointer;
+ opacity: 0;
+ transition: ease-in .2s;
+ padding-top: 4px;
+ padding-right: 10px;
+}
+
+.listCompleted, .listUnCompleted, .all, .clearAll, .completeAll{
+    cursor: pointer;
+    font-size: .9rem;
+    color: rgb(80, 80, 80);
+    transition: ease .2s;
+    margin: 10px;
+}
+
+.listCompleted:hover, .listUnCompleted:hover, .all:hover, .clearAll:hover, .completeAll:hover{
+    transform: scale(1.2);
+    font-weight: 500;
+}
+
+
+/* list dec */
+li{
+    list-style: none;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 5px ;
+    border: 2px solid rgb(80, 80, 80);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: ease-in .2s;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(112, 113, 117);
+
+}
+
+li:hover{
+    transform: scale(1.05);
+    background-color: rgb(100, 100, 100);
+}
+
+li:hover i{
+    opacity: 100;
+}
+
+ul{
+    padding: 0px;
+}
+
+
+label{
+    word-wrap: break-word;
+    width: 80%;
+}
+
+
+/* common class */
+
+.beFlex{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.beFlex-spaceBetween{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bgdGreen{
+    background-color: green;
+}
+
+.smallFont{
+    font-size: .8rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
